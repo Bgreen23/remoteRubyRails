@@ -1,0 +1,9 @@
+<h1>List</h1>
+<ul>
+  <% @animes.each do |anime| %>
+    <%= animes.name %>
+    <%= animes.creator %>
+    <%= link_to 'Show', animes %>
+    <%= link_to 'Edit', edit_anime_path(anime) %>
+    <%= link_to 'Destroy', user, method: :delete,
+                                    data: { confirm: 'Are you sure?' }
