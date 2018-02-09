@@ -1,5 +1,5 @@
 class AnimesController < ApplicationController
-  before_action :set_animes, only: [:show, :edit, :update, :destroy]
+  before_action :set_anime, only: [:show, :edit, :update, :destroy]
 
   # GET /animes
   # GET /animes.json
@@ -69,6 +69,6 @@ class AnimesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def anime_params
-      params.require(:animes).permit(:name, :creator)
+      params.require(:anime).permit(:name, :creator)
     end
 end
